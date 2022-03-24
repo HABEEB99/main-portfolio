@@ -4,8 +4,7 @@ import Showcase from '../showcase/Showcase';
 
 const Home = () => {
   return (
-    <div className="bg-body h-screen w-screen">
-      <Header />
+    <div id="home" className="bg-body h-screen w-screen">
       <Showcase />
     </div>
   );

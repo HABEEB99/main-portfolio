@@ -5,10 +5,12 @@ import { MdContactPhone } from 'react-icons/md';
 import { GiAmericanFootballHelmet } from 'react-icons/gi';
 import MobileNavItem from './MobileNavItem';
 
-const MobileNav = ({openMobileNav}) => {
+const MobileNav = ({ closeNav }) => {
   return (
-    
-      !openMobileNav && (<nav className="block lg:hidden rounded-lg shadow-2xl flex items-center z-[999] justify-around absolute top-16 bg-ctaLight right-6 md:right-16 w-72 h-96 flex-col  p-4 ">
+    <nav
+      onClick={() => closeNav()}
+      className=" lg:hidden rounded-lg shadow-2xl flex flex-col  items-center z-[999] justify-around absolute top-16 bg-ctaLight right-6 md:right-16 w-72 h-96  p-4 "
+    >
       <MobileNavItem title="Home" path="#home" Icon={FaHome} />
       <MobileNavItem title="About" path="#about" Icon={FaInfoCircle} />
       <MobileNavItem
@@ -18,8 +20,7 @@ const MobileNav = ({openMobileNav}) => {
       />
       <MobileNavItem title="Skills" path="#skills" Icon={IoMdConstruct} />
       <MobileNavItem title="Contacts" path="#contacts" Icon={MdContactPhone} />
-    </nav>)
-    
+    </nav>
   );
 };
 

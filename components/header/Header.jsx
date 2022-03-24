@@ -13,11 +13,10 @@ const Header = () => {
   const lightHandler = () => {
     setLight(!light);
   };
-  const handleMobileNav = () => {
-    setOpenMobileNav(!openMobileNav);
-  };
+  const closeNav = () => setOpenMobileNav(!openMobileNav);
+
   return (
-    <header className="px-6 md:px-16 lg:px-40 h-[10vh] flex items-center justify-between">
+    <header className="px-6 md:px-16 lg:px-40 h-[10vh] bg-body shadow-2xl sticky top-0 z-[999] flex items-center justify-between">
       <div className="cursor-pointer">
         <h1 className="text-ctaDark font-bold text-3xl">HABEEB</h1>
       </div>
@@ -42,15 +41,21 @@ const Header = () => {
         )}
       </div>
 
-      <div onClick={handleMobileNav} className="block lg:hidden">
-        {openMobileNav ? (
-          <FaBars className="text-4xl text-btn font-bold hover:text-green-500" />
+      <div className="block lg:hidden">
+        {!openMobileNav ? (
+          <FaBars
+            onClick={() => setOpenMobileNav(true)}
+            className="text-4xl text-btn font-bold hover:text-green-500"
+          />
         ) : (
-          <FaTimes className="text-4xl text-btn font-bold hover:text-red-500" />
+          <FaTimes
+            onClick={() => setOpenMobileNav(false)}
+            className="text-4xl text-btn font-bold hover:text-red-500"
+          />
         )}
       </div>
 
-       <MobileNav openMobileNav={openMobileNav}/>
+      {openMobileNav && <MobileNav closeNav={closeNav} />}
     </header>
   );
 };

@@ -9,6 +9,7 @@ import { MdContactPhone } from 'react-icons/md';
 import { GiAmericanFootballHelmet } from 'react-icons/gi';
 import { SiRedux, SiTailwindcss } from 'react-icons/si';
 import Socials from './Socials';
+import Container from '../container/Container';
 
 const Showcase = () => {
   return (
@@ -43,7 +44,7 @@ const Showcase = () => {
         <Socials path="#" Icon={BsTwitter} />
       </div>
 
-      <div className="hidden md:block absolute top-60 right-8">
+      <div className="hidden md:block absolute top-60 right-8 ">
         <FaHome className="text-xl md:text-2xl lg:text-3xl text-gray-300 hover:text-btn font-bold mt-3" />
         <FaInfoCircle className="text-xl md:text-2xl lg:text-3xl text-gray-300 hover:text-btn font-bold mt-3" />
         <GiAmericanFootballHelmet className="text-xl md:text-2xl lg:text-3xl text-gray-300 hover:text-btn font-bold mt-3" />
