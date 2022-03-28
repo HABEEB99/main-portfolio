@@ -16,7 +16,7 @@ const Header = () => {
   const closeNav = () => setOpenMobileNav(!openMobileNav);
 
   return (
-    <header className="px-6 md:px-16 lg:px-40 h-[10vh] bg-body shadow-2xl sticky top-0 z-[999] flex items-center justify-between">
+    <header className="px-6 md:px-16 lg:px-40 h-[10vh] bg-body shadow-md sticky top-0 z-[999] flex items-center justify-between">
       <div className="cursor-pointer">
         <h1 className="text-ctaDark font-bold text-3xl">HABEEB</h1>
       </div>
