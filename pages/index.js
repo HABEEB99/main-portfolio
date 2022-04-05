@@ -13,12 +13,14 @@ import { GiAmericanFootballHelmet } from 'react-icons/gi';
 import { SiRedux, SiTailwindcss } from 'react-icons/si';
 import Socials from '../components/showcase/Socials';
 import Header from '../components/header/Header';
+import Projects from '../components/projects/Projects';
+import Skills from '../components/skills/Skills';
+import Contacts from '../components/contacts/Contacts';
 // import Socials from './Socials';
 // import { sanityClient, urlFor } from '../lib/sanity';
 // import Image from 'next/image';
 
-export default function App({ abouts }) {
-  console.log(abouts);
+export default function App({ abouts, projects, skills, experiences }) {
   return (
     <div className="bg-body">
       <Head>
@@ -29,22 +31,12 @@ export default function App({ abouts }) {
 
       <Header />
       <Home />
-      <About data={abouts}/>
+      <About data={abouts} />
+      <Projects data={projects} />
+      <Skills skills={skills} experiences={experiences} />
+      <Contacts />
 
-      <div className="hidden md:block absolute bottom-8 left-8">
-        <Socials path="#" Icon={BsGithub} />
-        <Socials path="#" Icon={FaLinkedinIn} />
-        <Socials path="#" Icon={GrInstagram} />
-        <Socials path="#" Icon={BsTwitter} />
-      </div>
-
-      <div className="hidden md:block absolute top-60 right-8 ">
-        <FaHome className="text-xl md:text-2xl lg:text-3xl text-gray-300 hover:text-btn font-bold mt-3" />
-        <FaInfoCircle className="text-xl md:text-2xl lg:text-3xl text-gray-300 hover:text-btn font-bold mt-3" />
-        <GiAmericanFootballHelmet className="text-xl md:text-2xl lg:text-3xl text-gray-300 hover:text-btn font-bold mt-3" />
-        <IoMdConstruct className="text-xl md:text-2xl lg:text-3xl text-gray-300 hover:text-btn font-bold mt-3" />
-        <MdContactPhone className="text-xl md:text-2xl lg:text-3xl text-gray-300 hover:text-btn font-bold mt-3" />
-      </div>
+      
     </div>
   );
 }
@@ -53,9 +45,21 @@ export const getStaticProps = async () => {
   const aboutsData = `*[_type == 'abouts']`;
   const abouts = await client.fetch(aboutsData);
 
+  const projectsData = `*[_type == 'works']`;
+  const projects = await client.fetch(projectsData);
+
+  const skillsData = `*[_type == 'skills']`;
+  const skills = await client.fetch(skillsData);
+
+  const experiencesData = `*[_type == 'workExperience']`;
+  const experiences = await client.fetch(experiencesData);
+
   return {
     props: {
       abouts,
+      projects,
+      skills,
+      experiences,
     },
   };
 };

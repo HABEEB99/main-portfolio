@@ -13,7 +13,7 @@ import Container from '../container/Container';
 
 const Showcase = () => {
   return (
-    <div className="w-screen h-[90vh] px-6 md:px-12 lg:px-40 items-center justify-center flex pt-8">
+    <div className="pt-16 lg:pt-20  px-6 md:px-12 lg:px-32 items-center justify-center flex">
       <div className="mt-40 md:mt-0">
         <Image
           className="opacity-50"

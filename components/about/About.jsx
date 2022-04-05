@@ -7,7 +7,7 @@ const About = ({ data }) => {
   return (
     <div
       id="about"
-      className="w-screen lg:h-[90vh] px-3 sm:px-6 md:px-12 lg:px-32 pt-16 lg:pt-8 flex flex-col items-center"
+      className="w-screen lg:h-[90vh] px-3 sm:px-6 md:px-12 lg:px-40 pt-20 flex flex-col items-center"
     >
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-3xl text-btn font-bold underline">About</h1>
