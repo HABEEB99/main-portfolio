@@ -59,7 +59,7 @@ const Contacts = () => {
   return (
     <div
       id="contacts"
-      className="w-screen h-[115vh] md:h-[90vh] px-3 sm:px-6 md:px-12 lg:px-40 pt-20 flex flex-col "
+      className="w-screen  min-h-[90vh] px-3 sm:px-6 md:px-12 lg:px-40 pt-20 pb-10 flex flex-col "
     >
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-3xl text-btn font-bold underline">Contacts</h1>
@@ -147,7 +147,7 @@ const Contacts = () => {
                 Thanks! You will get a response soon{' '}
               </span>
             ) : (
-              <button className="p-4 text-3xl font-bold w-full flex items-center justify-center space-x-6 text-white bg-btn hover:bg-white hover:text-btn rounded-full">
+              <button className="p-4 text-3xl font-bold w-full flex items-center justify-center space-x-6 text-white bg-btn hover:bg-ctaDark hover:text-white transition-transform duration-300 ease-in rounded-full">
                 Send
                 <BiMailSend className="self-center mt-1 ml-2" />
               </button>
@@ -157,29 +157,37 @@ const Contacts = () => {
 
         <div className="flex flex-col mb-10 md:mb-0 justify-start space-y-6">
           <Link href="https://www.linkedin.com/in/habeeb-ahmadu/" passHref>
-            <div className="flex items-center space-x-4 cursor-pointer">
-              <FaLinkedinIn className="text-5xl text-btn font-bold" />
-              <h2 className="text-xl text-gray-400">LinkedIn</h2>
+            <div className="flex items-center space-x-4 cursor-pointer group">
+              <FaLinkedinIn className="text-5xl text-btn group-hover:text-ctaDark transition-transform duration-300 ease-in font-bold" />
+              <h2 className="text-xl text-gray-400 group-hover:text-ctaDark">
+                LinkedIn
+              </h2>
             </div>
           </Link>
 
           <Link href="https://github.com/HABEEB99" passHref>
-            <div className="flex items-center space-x-4 cursor-pointer">
-              <BsGithub className="text-5xl text-btn font-bold" />
-              <h2 className="text-xl text-gray-400">GitHub</h2>
+            <div className="flex items-center space-x-4 cursor-pointer group">
+              <BsGithub className="text-5xl text-btn group-hover:text-ctaDark transition-transform duration-300 ease-in font-bold" />
+              <h2 className="text-xl text-gray-400 group-hover:text-ctaDark">
+                GitHub
+              </h2>
             </div>
           </Link>
 
           <Link href="https://www.instagram.com/hbo39/" passHref>
-            <div className="flex items-center space-x-4 cursor-pointer">
-              <AiFillInstagram className="text-5xl text-btn font-bold" />
-              <h2 className="text-xl text-gray-400">Instagram</h2>
+            <div className="flex items-center space-x-4 cursor-pointer group">
+              <AiFillInstagram className="text-5xl text-btn group-hover:text-ctaDark transition-transform duration-300 ease-in font-bold" />
+              <h2 className="text-xl text-gray-400 group-hover:text-ctaDark">
+                Instagram
+              </h2>
             </div>
           </Link>
 
-          <div className="flex items-center space-x-4">
-            <MdOutgoingMail className="text-5xl text-btn font-bold" />
-            <h2 className="text-xl text-gray-400">habeebahmadu1@gmail.com</h2>
+          <div className="flex items-center space-x-4 group">
+            <MdOutgoingMail className="text-5xl text-btn group-hover:text-ctaDark transition-transform duration-300 ease-in font-bold" />
+            <h2 className="text-xl text-gray-400 group-hover:text-ctaDark">
+              habeebahmadu1@gmail.com
+            </h2>
           </div>
         </div>
       </div>

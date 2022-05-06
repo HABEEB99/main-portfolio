@@ -12,7 +12,7 @@ const About = ({ data }) => {
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-3xl text-btn font-bold underline">About</h1>
         <p className="italic text-xl mt-2 text-gray-500">
-          Here are the services that i can offer you
+          Here are the services that i offers
         </p>
       </div>
 

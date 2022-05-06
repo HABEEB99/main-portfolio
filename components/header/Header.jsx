@@ -8,10 +8,9 @@ import { GiAmericanFootballHelmet } from 'react-icons/gi';
 // import { BsFillSunFill, BsMoonFill } from 'react-icons/bs';
 // import { MdContactPhone } from 'react-icons/md';
 
-
 const Header = () => {
-  const [activeLink, setActiveLink] = useState(1)
-  const toggleActiveLink = index => setActiveLink(index)
+  const [activeLink, setActiveLink] = useState(1);
+  const toggleActiveLink = (index) => setActiveLink(index);
   const [light, setLight] = useState(true);
   const [openMobileNav, setOpenMobileNav] = useState(false);
   const lightHandler = () => {
@@ -26,19 +25,38 @@ const Header = () => {
       </div>
 
       <nav className="hidden lg:flex lg:items-center  lg:block">
-        <NavItem toggleActiveLink={toggleActiveLink} index={1} title="Home" path="#home" Icon={FaHome} />
-        <NavItem toggleActiveLink={toggleActiveLink} index={2} title="About" path="#about" Icon={FaInfoCircle} />
         <NavItem
-        toggleActiveLink={toggleActiveLink} index={3}
+          toggleActiveLink={toggleActiveLink}
+          index={1}
+          title="Home"
+          path="#home"
+          Icon={FaHome}
+        />
+        <NavItem
+          toggleActiveLink={toggleActiveLink}
+          index={2}
+          title="About"
+          path="#about"
+          Icon={FaInfoCircle}
+        />
+        <NavItem
+          toggleActiveLink={toggleActiveLink}
+          index={3}
           title="Projects"
           path="#projects"
           Icon={GiAmericanFootballHelmet}
         />
-        <NavItem toggleActiveLink={toggleActiveLink} index={4} title="Skills" path="#skills" Icon={IoMdConstruct} />
+        <NavItem
+          toggleActiveLink={toggleActiveLink}
+          index={4}
+          title="Skills"
+          path="#skills"
+          Icon={IoMdConstruct}
+        />
       </nav>
 
       <Link href="#contacts" passHref>
-        <button className="bg-btn hover:bg-white text-2xl font-bold hover:text-btn px-8 py-3 text-white rounded-full hidden lg:block">
+        <button className="bg-btn hover:bg-ctaDark text-2xl font-bold hover:text-white transition-transform duration-300 ease-in px-8 py-3 text-white rounded-full hidden lg:block">
           Hire Me
         </button>
       </Link>

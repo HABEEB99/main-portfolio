@@ -26,10 +26,10 @@ const DaapsProjects = ({data}) => {
 
           <div className="flex items-center justify-around space-x-16 mt-4">
             <Link passHref href={item.codeLink}>
-              <BsGithub className="text-2xl font-bold text-btn hover:text-white"/>
+              <BsGithub className="text-2xl font-bold text-btn hover:text-ctaDark transition-transform duration-300 ease-in"/>
             </Link>
-            <Link href="/" passHref>
-              <button className="bg-btn text-white font-bold hover:bg-white hover:text-btn px-4 py-2 rounded-full">View Details</button>
+            <Link href={item.projectLink} passHref>
+              <button className="bg-btn text-white font-bold hover:bg-ctaDark hover:text-white transition-transform duration-300 ease-in px-4 py-2 rounded-full">View Details</button>
             </Link>
           </div>
         </div>

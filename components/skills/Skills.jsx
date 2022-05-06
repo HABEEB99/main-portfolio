@@ -6,7 +6,7 @@ const Skills = ({ skills, experiences }) => {
   return (
     <div
       id="skills"
-      className="w-screen h-[200vh] sm:h-[190vh] md:h-[125vh] lg:h-[90vh] px-3 sm:px-6 md:px-12 lg:px-40 pt-16 lg:pt-20 flex flex-col items-center"
+      className="w-screen min-h-[90vh] px-3 sm:px-6 md:px-12 lg:px-40 pt-16 lg:pt-20 flex flex-col items-center"
     >
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-3xl text-btn font-bold underline">Skills</h1>
@@ -15,7 +15,7 @@ const Skills = ({ skills, experiences }) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full h-[70vh] mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full min-h-[50vh] mt-12">
         <div className="flex flex-col-reverse items-center justify-center">
           {experiences?.map((item) => (
             <div key={item._id} className="flex flex-col p-4 lg:p-2 space-y-1">
